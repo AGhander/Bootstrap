@@ -17,6 +17,44 @@
 .navbar {
 background-color: var(--dark-color);
 }
+.navbar-brand{color:#ffffff;}
+.navbar .navbar-nav .nav-link{
+    display: inline-block;
+    padding: 15px;
+    border-bottom: 1px solid transparent;
+    -webkit-background-clip:text;
+    position: relative;                         /*ghander modified the hover*/
+    background-image: linear-gradient( to right, #f9be0a, #f9be0a 50%, #ffffff 50% );
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar.navbar-nav .nav-link:hover{
+    background-position: 0;
+}
+.navbar .navbar-nav .nav-link::before{
+                content: '';
+                background: #f9be0a;
+                display: block;
+                position: absolute;
+                bottom: -3px; /*ghander modified the hover*/
+                left: 0;
+                width: 0;
+                height: 1px;
+                transition: all 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:hover::before{width: 100%;}
+.navbar .navbar-nav .nav-link.li a{
+             color: #ffffff;
+             text-decoration: none;
+}
+.clearfix {
+    clear: both
+}
+
+
 /*end navbar*/
 
 .footer {
